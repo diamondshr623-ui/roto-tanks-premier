@@ -3,6 +3,14 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { products } from "@/lib/products";
 import heroTank from "@/assets/hero-tank.jpg";
 import { ArrowRight, Shield, Layers, Award, Truck } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import ad1 from "@/assets/ad-1.jpg";
+import ad2 from "@/assets/ad-2.jpg";
+import ad3 from "@/assets/ad-3.jpg";
+import ad4 from "@/assets/ad-4.jpg";
+import ad5 from "@/assets/ad-5.jpg";
+import { useRef } from "react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -20,8 +28,33 @@ export const Route = createFileRoute("/")({
 
 function HomePage() {
   const featured = products.slice(0, 4);
+  const ads = [ad1, ad2, ad3, ad4, ad5];
+  const autoplay = useRef(Autoplay({ delay: 3500, stopOnInteraction: false }));
   return (
     <SiteLayout>
+      {/* Auto-sliding ad carousel */}
+      <section className="bg-navy">
+        <Carousel
+          opts={{ loop: true, align: "start" }}
+          plugins={[autoplay.current]}
+          className="w-full"
+        >
+          <CarouselContent className="ml-0">
+            {ads.map((src, i) => (
+              <CarouselItem key={i} className="pl-0 basis-full">
+                <div className="w-full h-[55vh] md:h-[70vh] bg-navy overflow-hidden">
+                  <img
+                    src={src}
+                    alt={`ROTO TANKS advertisement ${i + 1}`}
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+      </section>
+
       {/* Hero */}
       <section className="relative grid lg:grid-cols-2 items-stretch border-b border-border">
         <div className="p-8 lg:p-20 flex flex-col justify-center animate-fade-up">
