@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useMemo } from "react";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { products, categories } from "@/lib/products";
+import { products, categories, WHATSAPP_NUMBER } from "@/lib/products";
 
 export const Route = createFileRoute("/products")({
   head: () => ({
@@ -69,7 +69,7 @@ function ProductsPage() {
                 <div className="p-6 pb-0">
                   <div className="flex justify-between items-start mb-5">
                     <span className="text-3xl font-extrabold tracking-tighter">{p.capacity}</span>
-                    <span className="font-mono text-[10px] bg-secondary px-2 py-1">{p.ref}</span>
+                    <span className="font-mono text-[10px] bg-secondary px-2 py-1">{p.category}</span>
                   </div>
                   <div className="w-full aspect-square bg-secondary grid place-items-center mb-6 overflow-hidden">
                     <img
@@ -84,22 +84,24 @@ function ProductsPage() {
                 </div>
                 <div className="p-6 pt-0 border-t border-border mt-2">
                   <h3 className="font-bold uppercase text-sm tracking-tight mb-1 mt-4">{p.name}</h3>
-                  <p className="text-xs font-mono text-gold uppercase tracking-wider mb-4">{p.category}</p>
+                  <p className="text-2xl font-extrabold text-gold mb-3">{p.price}</p>
                   <p className="text-sm text-slate-warm leading-relaxed mb-5">{p.description}</p>
-                  <dl className="grid grid-cols-2 gap-3 mb-6">
-                    {p.specs.map((s) => (
-                      <div key={s.label}>
-                        <dt className="text-[10px] uppercase font-mono text-slate-warm/70">{s.label}</dt>
-                        <dd className="font-bold text-sm">{s.value}</dd>
-                      </div>
-                    ))}
-                  </dl>
-                  <Link
-                    to="/contact"
-                    className="block text-center w-full py-3 border-2 border-navy text-navy font-bold uppercase text-xs tracking-widest hover:bg-navy hover:text-white transition-colors"
-                  >
-                    Request Quote
-                  </Link>
+                  <div className="flex gap-2">
+                    <a
+                      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hello, I'd like to order a ${p.name} (${p.price}).`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 text-center py-3 bg-[#25D366] text-white font-bold uppercase text-xs tracking-widest hover:opacity-90 transition-opacity"
+                    >
+                      Order Now
+                    </a>
+                    <Link
+                      to="/contact"
+                      className="flex-1 text-center py-3 border-2 border-navy text-navy font-bold uppercase text-xs tracking-widest hover:bg-navy hover:text-white transition-colors"
+                    >
+                      Quote
+                    </Link>
+                  </div>
                 </div>
               </article>
             ))}
