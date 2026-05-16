@@ -42,11 +42,13 @@ function HomePage() {
           <CarouselContent className="ml-0">
             {ads.map((src, i) => (
               <CarouselItem key={i} className="pl-0 basis-full">
-                <div className="w-full h-[55vh] md:h-[70vh] bg-navy overflow-hidden">
+                <div className="w-full h-[60vh] md:h-[78vh] bg-navy overflow-hidden flex items-center justify-center">
                   <img
                     src={src}
                     alt={`ROTO TANKS advertisement ${i + 1}`}
-                    className="w-full h-full object-cover object-center"
+                    loading={i === 0 ? "eager" : "lazy"}
+                    decoding="async"
+                    className="w-full h-full object-contain object-center"
                   />
                 </div>
               </CarouselItem>
