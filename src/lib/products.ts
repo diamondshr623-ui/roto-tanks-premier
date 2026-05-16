@@ -1,9 +1,10 @@
-import vertical from "@/assets/tank-vertical.jpg";
-import horizontal from "@/assets/tank-horizontal.jpg";
-import loft from "@/assets/tank-loft.jpg";
-import septic from "@/assets/tank-septic.jpg";
-import cone from "@/assets/tank-cone.jpg";
-import chemical from "@/assets/tank-chemical.jpg";
+import vertical from "@/assets/roto-tank.png";
+import horizontal from "@/assets/roto-tank.png";
+import loft from "@/assets/roto-tank.png";
+import septic from "@/assets/roto-septic.png";
+import cone from "@/assets/roto-tank.png";
+import chemical from "@/assets/roto-tank.png";
+import pipes from "@/assets/roto-pipes.jpg";
 
 export type Product = {
   id: string;
@@ -32,9 +33,10 @@ export const products: Product[] = [
   { id: "septic-3500", name: "Underground Septic", capacity: "3,500 L", category: "Sanitation", image: septic, price: "KSh 38,000", description: "Reinforced ribbed shell handles soil pressure for safe underground installation." },
   { id: "cone-2000", name: "Cone Bottom Processor", capacity: "2,000 L", category: "Industrial", image: cone, price: "KSh 28,500", description: "Drainage-friendly cone bottom with steel support frame for processing." },
   { id: "chem-1500", name: "Chemical Storage 1500", capacity: "1,500 L", category: "Chemical", image: chemical, price: "KSh 19,500", description: "Chemical-resistant polyethylene formulation for fertilizers and process chemicals." },
-  { id: "pvc-20", name: "20mm PVC Pipe", capacity: "Per 100m", category: "Pipes", image: horizontal, price: "KSh 5,200", description: '20mm (½") PVC pipe for plumbing and water reticulation.' },
-  { id: "pvc-25", name: "25mm PVC Pipe", capacity: "Per 100m", category: "Pipes", image: horizontal, price: "KSh 6,800", description: '25mm (¾") PVC pipe for plumbing and water reticulation.' },
-  { id: "pvc-40", name: "40mm PVC Pipe", capacity: "Per 100m", category: "Pipes", image: horizontal, price: "KSh 12,800", description: '40mm (1¼") PVC pipe for mains and irrigation lines.' },
+  { id: "septic-5000", name: "Horizontal Septic Tank", capacity: "5,000 L", category: "Sanitation", image: septic, price: "KSh 58,000", description: "Heavy-duty ribbed horizontal septic tank for underground installation." },
+  { id: "pvc-20", name: "20mm HDPE Pipe", capacity: "Per 100m", category: "Pipes", image: pipes, price: "KSh 5,200", description: '20mm (½") HDPE pipe for plumbing and water reticulation.' },
+  { id: "pvc-25", name: "25mm HDPE Pipe", capacity: "Per 100m", category: "Pipes", image: pipes, price: "KSh 6,800", description: '25mm (¾") HDPE pipe for plumbing and water reticulation.' },
+  { id: "pvc-40", name: "40mm HDPE Pipe", capacity: "Per 100m", category: "Pipes", image: pipes, price: "KSh 12,800", description: '40mm (1¼") HDPE pipe for mains and irrigation lines.' },
 ];
 
 export const categories = ["All", "Domestic", "Industrial", "Agricultural", "Sanitation", "Chemical", "Pipes"] as const;
