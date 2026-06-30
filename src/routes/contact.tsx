@@ -44,7 +44,7 @@ function ContactPage() {
                   <Phone className="size-5 text-gold mt-1 shrink-0" />
                   <div>
                     <div className="text-xs font-mono uppercase tracking-widest text-slate-warm mb-1">Call</div>
-                    <a href="tel:+254700000000" className="text-lg font-bold hover:text-gold">+254 700 000 000</a>
+                    <a href="tel:0750379893" className="text-lg font-bold hover:text-gold">0750379893</a>
                   </div>
                 </div>
                 <div className="flex gap-4 items-start">
