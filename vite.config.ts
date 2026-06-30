@@ -12,4 +12,13 @@ export default defineConfig({
   tanstackStart: {
     server: { entry: "server" },
   },
+  vite: {
+    ssr: {
+      noExternal: [
+        "@tanstack/react-router",
+        "@tanstack/react-query",
+        "@tanstack/react-start",
+      ],
+    },
+  },
 });
