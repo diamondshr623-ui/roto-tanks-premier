@@ -20,7 +20,7 @@ export const products: Product[] = [
   { id: "t-1000", name: "1000L Water Tank", capacity: "1,000 L", category: "Domestic", image: vertical, price: "KSh 6,500", description: "Ideal for residential water storage and daily use." },
   { id: "t-2000", name: "2000L Water Tank", capacity: "2,000 L", category: "Domestic", image: vertical, price: "KSh 10,500", description: "Reliable storage for medium households and farms." },
   { id: "t-3000", name: "3000L Water Tank", capacity: "3,000 L", category: "Agricultural", image: vertical, price: "KSh 14,500", description: "Perfect for small commercial and agricultural use." },
-  { id: "t-4000", name: "4000L Water Tank", capacity: "4,000 L", category: "Agricultural", image: vertical, price: "KSh 18,500", description: "Heavy-duty storage for farms and large households." },
+  { id: "t-4000", name: "4000L Water Tank", capacity: "4,000 L", category: "Agricultural", image: vertical, price: "KSh 21,000", description: "Heavy-duty storage for farms and large households." },
   { id: "t-5000", name: "5000L Water Tank", capacity: "5,000 L", category: "Industrial", image: vertical, price: "KSh 24,500", description: "Designed for commercial and institutional water storage." },
   { id: "t-6000", name: "6000L Water Tank", capacity: "6,000 L", category: "Industrial", image: vertical, price: "KSh 27,500", description: "Designed for commercial and institutional water storage." },
   { id: "t-8000", name: "8000L Water Tank", capacity: "8,000 L", category: "Industrial", image: vertical, price: "KSh 32,500", description: "Designed for commercial and institutional water storage." },
@@ -41,6 +41,6 @@ export const products: Product[] = [
 
 export const categories = ["All", "Domestic", "Industrial", "Agricultural", "Sanitation", "Chemical", "Pipes"] as const;
 
-export const CONTACT_PHONE = "+254 711 000 000";
-export const CONTACT_PHONE_TEL = "+254711000000";
-export const WHATSAPP_NUMBER = "254711000000";
+export const CONTACT_PHONE = "+254 750 379 893";
+export const CONTACT_PHONE_TEL = "+254750379893";
+export const WHATSAPP_NUMBER = "254750379893";

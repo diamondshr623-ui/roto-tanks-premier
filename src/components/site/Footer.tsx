@@ -30,7 +30,7 @@ export function Footer() {
         </div>
         <div>
           <h5 className="text-[10px] font-mono uppercase tracking-widest text-gold mb-6">Sales Desk</h5>
-          <p className="text-2xl font-extrabold text-gold mb-2">+254 700 000 000</p>
+          <p className="text-2xl font-extrabold text-gold mb-2">+254 750 379 893</p>
           <p className="text-sm text-white/60">sales@rototanks.co.ke</p>
         </div>
       </div>
