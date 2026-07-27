@@ -44,7 +44,7 @@ function ContactPage() {
                   <Phone className="size-5 text-gold mt-1 shrink-0" />
                   <div>
                     <div className="text-xs font-mono uppercase tracking-widest text-slate-warm mb-1">Call</div>
-                    <a href="tel:+254750379893" className="text-lg font-bold hover:text-gold">+254 750 379 893</a>
+                    <a href="tel:+254762090909" className="text-lg font-bold hover:text-gold">+254 762 090 909</a>
                   </div>
                 </div>
                 <div className="flex gap-4 items-start">
@@ -124,7 +124,7 @@ function ContactPage() {
                   </Field>
                 </div>
                 <Field label="Message">
-                  <textarea rows={4} placeholder="Site conditions, installation notes, quantities..." className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white outline-none focus:border-gold transition-colors resize-none" />
+                  <textarea rows={4} placeholder="Site conditions, installation notes, quantities..." className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white outline-none focus:border-gold transition-colors" />
                 </Field>
                 <button
                   type="submit"

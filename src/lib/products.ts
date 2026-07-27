@@ -34,13 +34,13 @@ export const products: Product[] = [
   { id: "cone-2000", name: "Cone Bottom Processor", capacity: "2,000 L", category: "Industrial", image: cone, price: "KSh 28,500", description: "Drainage-friendly cone bottom with steel support frame for processing." },
   { id: "chem-1500", name: "Chemical Storage 1500", capacity: "1,500 L", category: "Chemical", image: chemical, price: "KSh 19,500", description: "Chemical-resistant polyethylene formulation for fertilizers and process chemicals." },
   { id: "septic-5000", name: "Horizontal Septic Tank", capacity: "5,000 L", category: "Sanitation", image: septic, price: "KSh 58,000", description: "Heavy-duty ribbed horizontal septic tank for underground installation." },
-  { id: "pvc-20", name: "20mm HDPE Pipe", capacity: "Per 100m", category: "Pipes", image: pipes, price: "KSh 5,200", description: '20mm (½") HDPE pipe for plumbing and water reticulation.' },
-  { id: "pvc-25", name: "25mm HDPE Pipe", capacity: "Per 100m", category: "Pipes", image: pipes, price: "KSh 6,800", description: '25mm (¾") HDPE pipe for plumbing and water reticulation.' },
-  { id: "pvc-40", name: "40mm HDPE Pipe", capacity: "Per 100m", category: "Pipes", image: pipes, price: "KSh 12,800", description: '40mm (1¼") HDPE pipe for mains and irrigation lines.' },
+  { id: "pvc-20", name: "20mm HDPE Pipe", capacity: "Per 100m", category: "Pipes", image: pipes, price: "KSh 5,200", description: '20mm (½" ) HDPE pipe for plumbing and water reticulation.' },
+  { id: "pvc-25", name: "25mm HDPE Pipe", capacity: "Per 100m", category: "Pipes", image: pipes, price: "KSh 6,800", description: '25mm (¾" ) HDPE pipe for plumbing and water reticulation.' },
+  { id: "pvc-40", name: "40mm HDPE Pipe", capacity: "Per 100m", category: "Pipes", image: pipes, price: "KSh 12,800", description: '40mm (1¼" ) HDPE pipe for mains and irrigation lines.' },
 ];
 
 export const categories = ["All", "Domestic", "Industrial", "Agricultural", "Sanitation", "Chemical", "Pipes"] as const;
 
-export const CONTACT_PHONE = "+254 750 379 893";
-export const CONTACT_PHONE_TEL = "+254750379893";
-export const WHATSAPP_NUMBER = "254750379893";
+export const CONTACT_PHONE = "+254 762 090 909";
+export const CONTACT_PHONE_TEL = "+254762090909";
+export const WHATSAPP_NUMBER = "254762090909";
