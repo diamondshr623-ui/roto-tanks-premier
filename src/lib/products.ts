@@ -41,6 +41,6 @@ export const products: Product[] = [
 
 export const categories = ["All", "Domestic", "Industrial", "Agricultural", "Sanitation", "Chemical", "Pipes"] as const;
 
-export const CONTACT_PHONE = "+254 750 379 893";
-export const CONTACT_PHONE_TEL = "+254750379893";
-export const WHATSAPP_NUMBER = "254750379893";
+export const CONTACT_PHONE = "+254 762 090 909";
+export const CONTACT_PHONE_TEL = "+254762090909";
+export const WHATSAPP_NUMBER = "254762090909";
