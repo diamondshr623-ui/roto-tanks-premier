@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useMemo } from "react";
+import { MessageCircle, Phone } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { products, categories, WHATSAPP_NUMBER } from "@/lib/products";
+import { products, categories, WHATSAPP_NUMBER, CONTACT_PHONE_TEL, CONTACT_PHONE } from "@/lib/products";
 
 export const Route = createFileRoute("/products")({
   head: () => ({
@@ -64,9 +65,9 @@ function ProductsPage() {
             {filtered.map((p) => (
               <article
                 key={p.id}
-                className="border border-border bg-background hover:border-gold transition-colors group"
+                className="border border-border bg-background hover:border-gold transition-colors group overflow-hidden flex flex-col"
               >
-                <div className="p-6 pb-0">
+                <div className="p-6 pb-0 flex-1">
                   <div className="flex justify-between items-start mb-5">
                     <span className="text-3xl font-extrabold tracking-tighter">{p.capacity}</span>
                     <span className="font-mono text-[10px] bg-secondary px-2 py-1">{p.category}</span>
@@ -82,24 +83,42 @@ function ProductsPage() {
                     />
                   </div>
                 </div>
-                <div className="p-6 pt-0 border-t border-border mt-2">
-                  <h3 className="font-bold uppercase text-sm tracking-tight mb-1 mt-4">{p.name}</h3>
-                  <p className="text-2xl font-extrabold text-gold mb-3">{p.price}</p>
-                  <p className="text-sm text-slate-warm leading-relaxed mb-5">{p.description}</p>
-                  <div className="flex gap-2">
+                
+                <div className="p-6 pt-0 border-t border-border mt-2 flex flex-col gap-4">
+                  <div>
+                    <h3 className="font-bold uppercase text-sm tracking-tight mb-2">{p.name}</h3>
+                    <p className="text-2xl font-extrabold text-gold mb-2">{p.price}</p>
+                    <p className="text-xs text-slate-warm leading-relaxed">{p.description}</p>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="flex flex-col gap-3 pt-2">
+                    {/* WhatsApp Button */}
                     <a
-                      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hello, I'd like to order a ${p.name} (${p.price}).`)}`}
+                      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi ROTO TANKS, I'm interested in the ${p.name} (${p.capacity} - ${p.price}). Can you provide more details and delivery information?`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 text-center py-3 bg-[#25D366] text-white font-bold uppercase text-xs tracking-widest hover:opacity-90 transition-opacity"
+                      className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-[#25D366] text-white font-bold uppercase text-xs tracking-widest hover:bg-[#20a856] transition-colors rounded-sm shadow-md"
                     >
-                      Order Now
+                      <MessageCircle className="size-4" strokeWidth={2.5} />
+                      Order via WhatsApp
                     </a>
+
+                    {/* Call Now Button */}
+                    <a
+                      href={`tel:${CONTACT_PHONE_TEL}`}
+                      className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-navy text-white font-bold uppercase text-xs tracking-widest hover:bg-navy-deep transition-colors rounded-sm shadow-md"
+                    >
+                      <Phone className="size-4" strokeWidth={2.5} />
+                      Call Now
+                    </a>
+
+                    {/* Quote Request Button */}
                     <Link
                       to="/contact"
-                      className="flex-1 text-center py-3 border-2 border-navy text-navy font-bold uppercase text-xs tracking-widest hover:bg-navy hover:text-white transition-colors"
+                      className="w-full text-center py-2 px-4 border-2 border-gold text-gold font-bold uppercase text-xs tracking-widest hover:bg-gold hover:text-navy transition-colors rounded-sm"
                     >
-                      Quote
+                      Request Quote
                     </Link>
                   </div>
                 </div>
