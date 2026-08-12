@@ -12,7 +12,7 @@ import ad4 from "@/assets/ad-4.jpg";
 import ad5 from "@/assets/ad-5.jpg";
 import { useRef } from "react";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/")( {
   head: () => ({
     meta: [
       { title: "ROTO TANKS — Premium Water Storage Tanks Kenya" },
